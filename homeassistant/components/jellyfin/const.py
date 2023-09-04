@@ -12,6 +12,7 @@ CLIENT_VERSION: Final = hass_version
 COLLECTION_TYPE_MOVIES: Final = "movies"
 COLLECTION_TYPE_MUSIC: Final = "music"
 COLLECTION_TYPE_TVSHOWS: Final = "tvshows"
+COLLECTION_TYPE_PLAYLISTS: Final = "playlists"
 
 CONF_CLIENT_DEVICE_ID: Final = "client_device_id"
 
@@ -33,6 +34,7 @@ ITEM_TYPE_LIBRARY: Final = "CollectionFolder"
 ITEM_TYPE_MOVIE: Final = "Movie"
 ITEM_TYPE_SERIES: Final = "Series"
 ITEM_TYPE_SEASON: Final = "Season"
+ITEM_TYPE_PLAYLIST: Final = "Playlst"
 
 MAX_IMAGE_WIDTH: Final = 500
 MAX_STREAMING_BITRATE: Final = "140000000"
@@ -47,9 +49,15 @@ SUPPORTED_COLLECTION_TYPES: Final = [
     COLLECTION_TYPE_MUSIC,
     COLLECTION_TYPE_MOVIES,
     COLLECTION_TYPE_TVSHOWS,
+    COLLECTION_TYPE_PLAYLISTS,
 ]
 
-PLAYABLE_ITEM_TYPES: Final = [ITEM_TYPE_AUDIO, ITEM_TYPE_EPISODE, ITEM_TYPE_MOVIE]
+PLAYABLE_ITEM_TYPES: Final = [
+    ITEM_TYPE_AUDIO,
+    ITEM_TYPE_EPISODE,
+    ITEM_TYPE_MOVIE,
+    ITEM_TYPE_PLAYLIST,
+]
 
 
 USER_APP_NAME: Final = "Home Assistant"
@@ -61,6 +69,7 @@ CONTENT_TYPE_MAP = {
     "Season": MediaType.SEASON,
     "Series": MediaType.TVSHOW,
     "Movie": MediaType.MOVIE,
+    "Playlist": MediaType.PLAYLIST,
     "CollectionFolder": "collection",
     "AggregateFolder": "library",
     "Folder": "library",
@@ -72,6 +81,7 @@ MEDIA_CLASS_MAP = {
     "Audio": MediaClass.MUSIC,
     "Series": MediaClass.DIRECTORY,
     "Movie": MediaClass.MOVIE,
+    "Playlist": MediaClass.PLAYLIST,
     "CollectionFolder": MediaClass.DIRECTORY,
     "Folder": MediaClass.DIRECTORY,
     "BoxSet": MediaClass.DIRECTORY,
