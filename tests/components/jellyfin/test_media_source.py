@@ -54,6 +54,16 @@ async def test_resolve(
     assert play_media.mime_type == "video/mp4"
     assert play_media.url == snapshot
 
+    # Test resolving a playlist
+    mock_api.get_item.side_effect = None
+    mock_api.get_item.return_value = load_json_fixture("playlist.json")
+
+    play_media = await async_resolve_media(hass, f"{URI_SCHEME}{DOMAIN}/PLAYLIST-UUID")
+
+    # TODO work out what to check here.
+    # assert play_media.mime_type == "video/mp4"
+    assert play_media.url == snapshot
+
     # Test resolving an unsupported item
     mock_api.get_item.side_effect = None
     mock_api.get_item.return_value = load_json_fixture("unsupported-item.json")

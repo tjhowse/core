@@ -1,0 +1,29 @@
+{
+    "Name": "playlist",
+    "ServerId": "string",
+    "Id": "PLAYLIST-UUID",
+    "ChannelId": null,
+    "RunTimeTicks": 0,
+    "IsFolder": true,
+    "Type": "Playlist",
+    "UserData": {
+        "UnplayedItemCount": 133,
+        "PlaybackPositionTicks": 0,
+        "PlayCount": 0,
+        "IsFavorite": false,
+        "Played": false,
+        "Key": "string"
+    },
+    "ChildCount": 133,
+    "ImageTags": {
+        "Primary": "string"
+    },
+    "BackdropImageTags": [],
+    "ImageBlurHashes": {
+        "Primary": {
+            "string": "string;"
+        }
+    },
+    "LocationType": "FileSystem",
+    "MediaType": "Video"
+}
